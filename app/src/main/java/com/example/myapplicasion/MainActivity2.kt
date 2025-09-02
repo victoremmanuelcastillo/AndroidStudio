@@ -5,11 +5,9 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import de.hdodenhof.circleimageview.CircleImageView
-
 class MainActivity2 : AppCompatActivity() {
     
-    private lateinit var mainImage: CircleImageView
+    private lateinit var mainImage: ImageView
     private lateinit var bottomImagesLayout: LinearLayout
     private var imagesVisible = false
     
