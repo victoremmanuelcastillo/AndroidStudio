@@ -32,8 +32,7 @@
             android:layout_height="100dp"
             android:layout_margin="10dp"
             android:background="#E3F2FD"
-            android:scaleType="centerCrop"
-            android:src"@mipmap/pastelazul"/>
+            android:scaleType="centerCrop" />
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="100dp"
