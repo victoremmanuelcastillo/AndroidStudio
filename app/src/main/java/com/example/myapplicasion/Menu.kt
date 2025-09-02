@@ -26,12 +26,12 @@ class Menu : AppCompatActivity() {
         boton2 = findViewById(R.id.Button2)
 
         boton1.setOnClickListener {
-            intent llamado1 = intent(this.Menu, cls = MainActivity::class.java)
-            startActivity(intent = llamado1)
+            val llamado1 = Intent(this, MainActivity::class.java)
+            startActivity(llamado1)
         }
         boton2.setOnClickListener {
-            intent llamado2 = intent(this.Menu, cls = MainActivity::class.java)
-            startActivity(intent = llamado2)
+            val llamado2 = Intent(this, MainActivity2::class.java)
+            startActivity(llamado2)
         }
     }
 }
