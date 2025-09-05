@@ -14,6 +14,7 @@ class Menu : AppCompatActivity() {
             
             val boton1 = findViewById<Button>(R.id.Button1)
             val boton2 = findViewById<Button>(R.id.Button2)
+            val boton3 = findViewById<Button>(R.id.Button3)
 
             boton1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
@@ -22,6 +23,11 @@ class Menu : AppCompatActivity() {
             
             boton2.setOnClickListener {
                 val intent = Intent(this, MainActivity2::class.java)
+                startActivity(intent)
+            }
+            
+            boton3.setOnClickListener {
+                val intent = Intent(this, GalleryActivity::class.java)
                 startActivity(intent)
             }
         } catch (e: Exception) {
