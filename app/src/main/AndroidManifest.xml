@@ -14,8 +14,7 @@
         <activity
             android:name=".Menu"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.Material.Light">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +26,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplicasion" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

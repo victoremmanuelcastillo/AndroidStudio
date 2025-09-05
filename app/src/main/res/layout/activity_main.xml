@@ -7,13 +7,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity2">
+    android:padding="20dp"
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello word!!"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:text="¡Bienvenido!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Botón 1"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#2196F3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Botón 2 - Imágenes"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50" />
 
 </LinearLayout>
