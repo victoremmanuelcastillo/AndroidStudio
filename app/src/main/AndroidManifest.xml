@@ -38,6 +38,9 @@
         <activity
             android:name=".GalleryActivity"
             android:exported="false" />
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
     </application>
 
 </manifest>
