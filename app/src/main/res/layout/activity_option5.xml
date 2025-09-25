@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Option5Activity">
+
+    <!-- Sección superior con ImageView y Botón Ver -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="horizontal">
+
+        <!-- ImageView circular que ocupa 1/3 de la pantalla -->
+        <ImageView
+            android:id="@+id/selectImagesView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:background="@drawable/circular_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="Seleccionar imágenes"
+            android:padding="20dp" />
+
+        <!-- Botón Mostrar al lado derecho -->
+        <Button
+            android:id="@+id/viewButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="Mostrar"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- RadioButtons para Escuela y Casa -->
+    <RadioGroup
+        android:id="@+id/categoryRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="16dp">
+
+        <RadioButton
+            android:id="@+id/radioEscuela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="Escuela"
+            android:textSize="16sp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioCasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Casa"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <!-- ScrollView para las listas de imágenes -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- RecyclerView para imágenes de Escuela -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/escuelaRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone" />
+
+            <!-- RecyclerView para imágenes de Casa -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/casaRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

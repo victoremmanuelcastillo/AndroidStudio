@@ -3,12 +3,14 @@ package com.example.myapplicasion
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.database.Cursor
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -20,6 +22,8 @@ class GalleryActivity : AppCompatActivity() {
     
     private lateinit var imageView: ImageView
     private lateinit var selectImageButton: Button
+    private lateinit var imagePathTextView: TextView
+    private lateinit var imageUriTextView: TextView
     private lateinit var galleryLauncher: ActivityResultLauncher<Intent>
     
     companion object {
@@ -38,6 +42,8 @@ class GalleryActivity : AppCompatActivity() {
     private fun initializeViews() {
         imageView = findViewById(R.id.imageView)
         selectImageButton = findViewById(R.id.selectImageButton)
+        imagePathTextView = findViewById(R.id.imagePathTextView)
+        imageUriTextView = findViewById(R.id.imageUriTextView)
     }
     
     private fun setupGalleryLauncher() {
@@ -47,6 +53,14 @@ class GalleryActivity : AppCompatActivity() {
             if (result.resultCode == RESULT_OK) {
                 result.data?.data?.let { uri ->
                     imageView.setImageURI(uri)
+                    val imagePath = getRealPathFromURI(uri)
+                    if (imagePath != null) {
+                        imagePathTextView.text = imagePath
+                        imagePathTextView.visibility = android.view.View.VISIBLE
+                    }
+
+                    imageUriTextView.text = "URI: ${uri.toString()}"
+                    imageUriTextView.visibility = android.view.View.VISIBLE
                 }
             }
         }
@@ -114,6 +128,21 @@ class GalleryActivity : AppCompatActivity() {
                     Toast.makeText(this, "Sin permisos no podemos mostrar tus fotos. Puedes activarlos en Configuración.", Toast.LENGTH_LONG).show()
                 }
             }
+        }
+    }
+
+    private fun getRealPathFromURI(contentUri: Uri): String? {
+        var cursor: Cursor? = null
+        return try {
+            val proj = arrayOf(MediaStore.Images.Media.DATA)
+            cursor = contentResolver.query(contentUri, proj, null, null, null)
+            val columnIndex = cursor?.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+            cursor?.moveToFirst()
+            columnIndex?.let { cursor?.getString(it) }
+        } catch (e: Exception) {
+            contentUri.path
+        } finally {
+            cursor?.close()
         }
     }
 }
