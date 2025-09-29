@@ -44,6 +44,9 @@
         <activity
             android:name=".Option5Activity"
             android:exported="false" />
+        <activity
+            android:name=".EjemploCorrootinaActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

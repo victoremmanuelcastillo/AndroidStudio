@@ -73,4 +73,19 @@
             android:text="Opcion 5"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp" >
+
+        <Button
+            android:id="@+id/Button6"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="ejemplo_corootina"/>
+    </LinearLayout>
+
 </LinearLayout>
