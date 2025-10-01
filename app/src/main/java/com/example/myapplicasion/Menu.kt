@@ -18,6 +18,8 @@ class Menu : AppCompatActivity() {
             val boton4 = findViewById<Button>(R.id.Button4)
             val boton5 = findViewById<Button>(R.id.Button5)
             val boton6 = findViewById<Button>(R.id.Button6)
+            val boton7 = findViewById<Button>(R.id.Button7)
+            val boton8 = findViewById<Button>(R.id.Button8)
 
             boton1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
@@ -46,6 +48,16 @@ class Menu : AppCompatActivity() {
 
             boton6.setOnClickListener {
                 val intent = Intent(this, EjemploCorrootinaActivity::class.java)
+                startActivity(intent)
+            }
+
+            boton7.setOnClickListener {
+                val intent = Intent(this, ListActivity::class.java)
+                startActivity(intent)
+            }
+
+            boton8.setOnClickListener {
+                val intent = Intent(this, StopwatchActivity::class.java)
                 startActivity(intent)
             }
         } catch (e: Exception) {

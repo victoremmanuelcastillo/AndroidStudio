@@ -47,6 +47,12 @@
         <activity
             android:name=".EjemploCorrootinaActivity"
             android:exported="false" />
+        <activity
+            android:name=".ListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StopwatchActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
