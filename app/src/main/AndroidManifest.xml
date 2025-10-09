@@ -53,6 +53,12 @@
         <activity
             android:name=".StopwatchActivity"
             android:exported="false" />
+        <activity
+            android:name=".ArticulItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Option7Activity"
+            android:exported="false" />
     </application>
 
 </manifest>
