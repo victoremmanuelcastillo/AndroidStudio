@@ -62,6 +62,15 @@
         <activity
             android:name=".PreferenciasActivity"
             android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrincipalActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity">
+
+    <!-- Botón de cerrar sesión en la esquina superior derecha -->
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:text="Cerrar Sesión"
+        android:textSize="14sp" />
+
+    <!-- Contenido principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvBienvenida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Contenedor para la imagen del usuario -->
+        <LinearLayout
+            android:id="@+id/layoutImagenUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivImagenUsuario"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Imagen del usuario" />
+
+            <TextView
+                android:id="@+id/tvNombreImagen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Contenedor para seleccionar imagen -->
+        <LinearLayout
+            android:id="@+id/layoutSeleccionarImagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona tu imagen de perfil"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"
+                android:textAlignment="center" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="3">
+
+                <ImageView
+                    android:id="@+id/ivOpcion1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/avatar_1"
+                    android:scaleType="centerCrop"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Avatar azul" />
+
+                <ImageView
+                    android:id="@+id/ivOpcion2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/avatar_2"
+                    android:scaleType="centerCrop"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Avatar verde" />
+
+                <ImageView
+                    android:id="@+id/ivOpcion3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/avatar_3"
+                    android:scaleType="centerCrop"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Avatar rojo" />
+
+                <ImageView
+                    android:id="@+id/ivOpcion4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/avatar_4"
+                    android:scaleType="centerCrop"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Avatar morado" />
+
+                <ImageView
+                    android:id="@+id/ivOpcion5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/avatar_5"
+                    android:scaleType="centerCrop"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Avatar naranja" />
+
+                <ImageView
+                    android:id="@+id/ivOpcion6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/avatar_6"
+                    android:scaleType="centerCrop"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Avatar cian" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
