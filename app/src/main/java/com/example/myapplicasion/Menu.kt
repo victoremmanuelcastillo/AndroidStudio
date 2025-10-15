@@ -22,6 +22,7 @@ class Menu : AppCompatActivity() {
             val boton8 = findViewById<Button>(R.id.Button8)
             val boton9 = findViewById<Button>(R.id.Button9)
             val boton10 = findViewById<Button>(R.id.Button10)
+            val boton11 = findViewById<Button>(R.id.Button11)
 
             boton1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
@@ -70,6 +71,11 @@ class Menu : AppCompatActivity() {
 
             boton10.setOnClickListener {
                 val intent = Intent(this, Option7Activity::class.java)
+                startActivity(intent)
+            }
+
+            boton11.setOnClickListener {
+                val intent = Intent(this, PreferenciasActivity::class.java)
                 startActivity(intent)
             }
         } catch (e: Exception) {
