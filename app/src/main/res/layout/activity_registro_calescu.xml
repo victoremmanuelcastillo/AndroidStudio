@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRO"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="48dp"/>
+
+    <EditText
+        android:id="@+id/etUsuarioRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <EditText
+        android:id="@+id/etPasswordRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <EditText
+        android:id="@+id/etConfirmarPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirmar"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <Button
+        android:id="@+id/btnGuardarRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GUARDAR"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:padding="16dp"/>
+
+</LinearLayout>

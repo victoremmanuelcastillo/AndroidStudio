@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de Materias"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código (ej: 2244)"
+            android:inputType="text"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <EditText
+            android:id="@+id/etNombreMateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre (ej: Desarrollo de Aplicaciones Web)"
+            android:inputType="text"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <EditText
+            android:id="@+id/etCreditos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Créditos (ej: 15)"
+            android:inputType="number"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnGuardarMateria"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_margin="4dp"/>
+
+            <Button
+                android:id="@+id/btnEliminarMateria"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Eliminar"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:layout_margin="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnConsultarMaterias"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Consultar"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"
+                android:layout_margin="4dp"/>
+
+            <Button
+                android:id="@+id/btnVerMateria"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Ver"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                android:layout_margin="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

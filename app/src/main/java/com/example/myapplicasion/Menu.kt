@@ -24,6 +24,10 @@ class Menu : AppCompatActivity() {
             val boton10 = findViewById<Button>(R.id.Button10)
             val boton11 = findViewById<Button>(R.id.Button11)
             val boton12 = findViewById<Button>(R.id.Button12)
+            val boton13 = findViewById<Button>(R.id.Button13)
+            val boton14 = findViewById<Button>(R.id.Button14)
+            val boton15 = findViewById<Button>(R.id.Button15)
+            val boton16 = findViewById<Button>(R.id.Button16)
 
             boton1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
@@ -82,6 +86,26 @@ class Menu : AppCompatActivity() {
 
             boton12.setOnClickListener {
                 val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+            }
+
+            boton13.setOnClickListener {
+                val intent = Intent(this, SqliteActivity::class.java)
+                startActivity(intent)
+            }
+
+            boton14.setOnClickListener {
+                val intent = Intent(this, LoginCalescuActivity::class.java)
+                startActivity(intent)
+            }
+
+            boton15.setOnClickListener {
+                val intent = Intent(this, NewsActivity::class.java)
+                startActivity(intent)
+            }
+
+            boton16.setOnClickListener {
+                val intent = Intent(this, NewsCategoryActivity::class.java)
                 startActivity(intent)
             }
         } catch (e: Exception) {

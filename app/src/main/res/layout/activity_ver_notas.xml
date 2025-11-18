@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consultar Calificaciones"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="48dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Alumno:"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSeleccionarAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📄 Seleccionar Alumno"
+        android:backgroundTint="#9C27B0"
+        android:textColor="#FFFFFF"
+        android:padding="20dp"
+        android:textSize="18sp"/>
+
+</LinearLayout>
