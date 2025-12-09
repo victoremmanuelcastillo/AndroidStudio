@@ -28,6 +28,7 @@ class Menu : AppCompatActivity() {
             val boton14 = findViewById<Button>(R.id.Button14)
             val boton15 = findViewById<Button>(R.id.Button15)
             val boton16 = findViewById<Button>(R.id.Button16)
+            val boton17 = findViewById<Button>(R.id.Button17)
 
             boton1.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
@@ -106,6 +107,11 @@ class Menu : AppCompatActivity() {
 
             boton16.setOnClickListener {
                 val intent = Intent(this, NewsCategoryActivity::class.java)
+                startActivity(intent)
+            }
+
+            boton17.setOnClickListener {
+                val intent = Intent(this, ImgPerActivity::class.java)
                 startActivity(intent)
             }
         } catch (e: Exception) {

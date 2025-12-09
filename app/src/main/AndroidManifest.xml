@@ -103,6 +103,9 @@
         <activity
             android:name=".VerNotasActivity"
             android:exported="false" />
+        <activity
+            android:name=".ImgPerActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
